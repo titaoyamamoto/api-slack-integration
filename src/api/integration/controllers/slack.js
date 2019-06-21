@@ -23,8 +23,10 @@ const asyncFlow = async (payload) => {
 const slackIntegration = async (request, reply) => {
     let { payload } = request;
 
-    //make async flow to continue the proccess
-    asyncFlow(payload);
+    if (payload.type != 'url_verification'){
+        //make async flow to continue the proccess
+        asyncFlow(payload);
+    }
 
     //Reply before end the flow 
     //Just to confirm the transaction to Slack
