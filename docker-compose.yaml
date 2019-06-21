@@ -13,8 +13,9 @@ services:
       - "3100:3100"
     image: api-slack-integration
     container_name: api-slack-integration
-    network_mode: api-driver-network
+    networks: 
+      - api-network-driver
 
 networks:
-  api-driver-network:
-     name: api-driver-network
+  api-network-driver:
+     name: api-network-driver
