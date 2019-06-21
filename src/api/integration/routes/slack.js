@@ -12,6 +12,7 @@ module.exports = [
             validate:
             {
                 payload: Joi.object({
+                    challenge: Joi.string(), //property to register the API to Slack
                     token: Joi.string(),
                     team_id: Joi.string(),
                     api_app_id: Joi.string(),
